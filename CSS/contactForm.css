@@ -1,0 +1,133 @@
+:root{
+    --goldClr: #f7b035;
+
+    --greenClr-light: #4f8a10;
+    --greenClr-dark: #256b3e;
+    
+    --whiteClr: #fff;
+
+    --blackClr-background: #1d1d1d;
+
+}
+
+
+#contactForm{
+    /* background: linear-gradient(to top , rgb(var(--greenClr-dark-op), 0.5) 1%, var(--blackClr-background) 70%); */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    & .container{
+        
+        justify-content: flex-end;
+        padding: 50px;
+
+        & .contactForm-text{
+            width: 50%;
+            align-items: flex-start;
+            padding: 80px;
+
+            & h2{
+                color: var(--goldClr);
+                font-size: 50px;
+                line-height: 1;
+                margin-block-end: 50px;
+            }
+
+        }
+
+        & form{
+            z-index: 2;
+            width: 50%;
+            align-items: flex-start;
+            padding: 80px;
+
+            background-color: #262626;
+            gap: 8px;
+
+            & h3{
+                margin-block-end: 16px;
+            }
+
+            & .input-texts{
+                width: 100%;
+                padding: 15px 20px;
+
+                border: none;
+                border-radius: 1px;
+
+                background-color: #474646;
+                color: var(--whiteClr);
+                margin-block-end: 18px;
+            }
+
+            & input:focus, textarea:focus {
+                outline: none;
+            }
+
+            & .base-gold-btn{
+                width: 100%;
+            }
+        }
+
+
+
+    }
+
+}
+
+
+@media screen and (max-width: 1100px) {
+    #contactForm{
+        & .container{
+            flex-direction: column;
+            text-align: center;
+
+            & .contactForm-text{
+                width: 100%;
+                padding: 5px;
+
+                & h3{
+                    font-size: 18px;
+                    margin-block-end: 16px;
+                }
+                & h2{
+                    margin-block-end: 24px;
+                }
+                & p{
+                    margin-block-end: 30px;
+                }
+            }
+            & form{
+                width: 100%;
+                padding-inline:50px;
+            }
+            
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #contactForm{
+        padding-block: 50px;
+        & .container{
+            flex-direction: column;
+            text-align: center;
+            padding: 10px;
+
+            & .contactForm-text{
+                width: 100%;
+                padding-inline: 10px;
+
+                & h2{
+                    font-size: 40px;
+                }
+            }
+            & form{
+                width: 100%;
+                padding: 20px;
+            }
+            
+        }
+    }
+}

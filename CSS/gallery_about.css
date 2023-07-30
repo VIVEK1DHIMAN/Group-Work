@@ -1,0 +1,199 @@
+#bartender-art{
+    /* padding-block: 100px; */
+    background: linear-gradient(to top , rgb(var(--greenClr-dark-op), 0.5) 1%, var(--blackClr-background) 70%);
+    color: var(--whiteClr);
+
+    & .container {
+        & p {
+            max-width: 800px;
+        }
+    }
+}
+
+.bartender-gallery {
+
+    width: 100%;
+    padding-block: 50px;
+    & img {
+        /* box-shadow: 0px 0px 15px rgba(71, 68, 68, 0.414); */
+        transition: 0.3s ease-in;
+        border-radius: 5px;
+
+    }
+    & img:hover{
+        transform: scale(1.1);
+        cursor: pointer;
+        z-index: 5;
+    }
+
+
+    & .bar-man {
+        /* photo 1 */
+        width: 290px;
+        height: 190px;
+    }
+
+    & .pink-drink {
+        /* photo 2  */
+        width: 230px;
+        height: 330px;
+        margin-inline-start: -60px;
+
+    }
+
+    & .pouring-drink {
+        /* photo 3  */
+        margin-inline: -50px;
+
+    }
+
+    & .pouring-drink,
+    .bar-man2 {
+        width: 320px;
+        height: 420px;
+
+    }
+
+    & .single-drink {
+        /* photo 4  */
+        width: 240px;
+        height: 260px;
+        z-index: 4;
+    }
+
+    & .bar-man2 {
+        /* photo 5  */
+        margin-inline-start: -70px;
+        z-index: 3;
+
+    }
+
+    & .book-drink {
+        /* photo 6  */
+        width: 230px;
+        height: 330px;
+        margin-inline-start: -30px;
+        margin-inline-end: -20px;
+        z-index: 2
+    }
+
+    & .fire-whiskey {
+        /* photo 7  */
+        width: 170px;
+        height: 250px;
+        z-index: 0;
+
+    }
+}
+
+#about-me {
+    padding-block-start: 100px;
+    /* background: linear-gradient(to bottom right, var(--greenClr-dark), var(--blackClr-background)); */
+    /* background: linear-gradient(to top , var(--greenClr-dark) 1%, var(--blackClr-background) 70%); */
+    background: linear-gradient(to top , rgb(var(--greenClr-dark-op), 0.5) 1%, var(--blackClr-background) 70%);
+    
+    & .container{
+
+        flex-direction: row-reverse;
+
+    }
+
+    & .heading-2{
+        margin-block-end: 20px;
+        color: var(--goldClr);
+    }
+    & .about-me-left{
+        width: 50%;
+    }
+    & .about-me-left img{
+        width: 420px;
+        height: 550px;
+        border-radius: 2px;
+        box-shadow: 2px 5px 5px 2px rgba(45, 44, 44, 0.414);
+        object-fit: cover;
+    }
+    & .about-me-right{
+        width: 50%;
+        text-align: left;
+        
+        padding-inline: 20px;
+        font-size: 18px;
+        color: var(--whiteClr);
+        
+    }
+    & p{
+        margin-block-end: 20px;
+        opacity: 80%;
+    }
+}
+
+/* MEDIA QUERIES  */
+@media screen and (max-width: 1550px) {
+    .bartender-gallery{
+        padding-inline: 50px !important;
+    }
+    
+}
+@media screen and (max-width: 1440px){
+    .single-drink{
+        display: none;
+    }
+}
+@media screen and (max-width: 1220px){
+    .bar-man, .fire-whiskey{
+        display: none;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 950px){
+    /* #about-me{ */
+
+        .pouring-drink{
+            display: none;
+        }
+        .bartender-gallery{
+            padding-inline: 50px;
+            gap: 10px;
+        }
+        .pink-drink, .book-drink{
+            display: none;
+        }
+        .pouring-drink{
+            margin-inline: 1px;
+        }
+        .bar-man2{
+            margin-inline-start: 1px;
+        }
+        #about-me .container{
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+            text-align: center;   
+            
+        }
+
+        /* .about-me-left{
+            display: none;
+        } */
+
+        & .about-me-left img{
+            width: 220px !important;
+            height: 350px !important;
+        }
+    
+        .about-me-right{
+            text-align: center;
+            padding-inline: 0px;
+            width: 100%;
+        }
+    
+        .about-me-right > *{
+            text-align: center;
+        }
+    
+     
+}

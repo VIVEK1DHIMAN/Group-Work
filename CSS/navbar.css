@@ -1,0 +1,221 @@
+@import url("base.css");
+
+#navbar-section{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    /* background-color: rgb(29, 29, 29, 0.2); */
+    background-color: transparent;
+    z-index: 1;
+
+    & .container{
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        padding-block: 10px;
+    }
+
+    & .brand-title{
+        width: 20%;
+        object-fit: cover;
+    }
+
+    & .brand-title img{
+        object-fit: cover;
+    }
+
+    & .navbar-links{
+        gap: 40px;
+        height: 100%;
+    }
+
+    & .nav-items{
+        position: relative;
+        /* height: 35px; */
+        transition: all 0.2s ease;
+        /* opacity: 1; */
+    }
+
+    & .nav-items:first-child a{
+        color: var(--goldClr);
+        font-weight: 600;
+    }
+
+    /* & .nav-items:hover{
+        opacity: 0.9;
+    } */
+
+    & .nav-items a{
+        position: relative;
+        font-size: 18px;
+        letter-spacing: 0.36px;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Nav-items slide animation */
+
+    & .nav-items > a::after{
+        content: "";
+        position: absolute;
+        width: 0;
+        bottom: -8px;
+        height: 3px;
+        border-radius: 2px;
+        margin-top: 4px;
+        background-color: var(--goldClr);
+        display: block;
+        transition: all 0.3s ease;
+    }
+
+    & .nav-items:hover a::after{
+        width: 100%;
+    }
+
+    /* & .arrow{
+        color: var(--goldClr);
+    } */
+
+    /* Sub Menu */
+    & .sub-nav-links{
+            display: none;
+        position: absolute;
+        inset-inline-end: 0;
+        /* inset-block-start: 45px; */
+        width: 250px;
+        padding-top: 25px;
+    } 
+
+    & .nav-items:hover .sub-nav-links{
+        display: block;
+    }
+
+    & .sub-nav-links li{
+        position: relative;
+        width: 100%;
+        padding: 20px 20px;
+        border-bottom: 2px solid var(--goldClr);
+        background-color: rgb(29, 29, 29);
+        transition: all 0.2s ease;
+    }
+
+    & .sub-nav-links li:hover{
+        background-color: rgb(247, 176, 54);
+        
+    }
+
+    /* Sub-sub Menu */
+
+    & .sub-nav-links li ul{
+        display: none;
+        right: 100%;
+        top: 0;
+        position: absolute;
+        width: 200px;
+    }
+
+    & .sub-nav-links li:hover ul{
+        display: block;
+    }
+
+
+    /* hamburger */
+    & .navbar .dropdown-button{
+        position: relative;
+        display: none;
+        z-index: 2;
+    
+        & .hamburger{
+            flex-direction: column;
+            gap: 9px;
+            width: 35px;
+            height: 31px;
+            position: relative;
+            transition: all 0.5s ease;
+        }
+        
+        & .hamburger span{
+            width: 100%;
+            height: 3px;
+            border-radius: 2px;
+            background-color: var(--goldClr);
+        }
+
+        & input[type="checkbox"]{
+            position: absolute;
+            display: none;
+        }
+     
+        & input[type="checkbox"]:checked + .hamburger span{
+            display: flex;
+            position: absolute;
+            transition: all 0.5s ease;
+        }
+        
+        & input[type="checkbox"]:checked + .hamburger span:first-child{
+            transform: rotateZ(45deg);
+        }
+        & input[type="checkbox"]:checked + .hamburger span:last-child{
+            transform: rotateZ(-45deg);
+        }
+        
+        & input[type="checkbox"]:checked + .hamburger span:nth-child(2){
+           opacity: 0;
+        }
+    }
+}
+
+
+/* Dropdown Menu */
+@media (max-width: 786px){
+    #navbar-section{
+
+        & .navbar-links{
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            inset-inline-end: -1px;
+            inset-block-start: 0;
+            padding-top: 80px;
+            /* padding-inline: 20px; */
+            min-height: 600px;
+            width: 300px;
+            z-index: 1;
+            background-color: rgb(29, 29, 29);
+            gap: 10px;
+
+            & .nav-items > a::after{
+                display: none;
+            }
+        }
+
+        & .navbar-links.active{
+            display: flex;
+        }
+
+        & .navbar-links li{
+            padding: 20px 40px;
+        }
+
+        & .navbar .dropdown-button{
+            display: flex;
+        }
+
+        & .sub-nav-links{
+            top: 0;
+            inset-inline-end: 100%;
+        }
+    }
+}
+
+@media (max-width: 390px){
+    #navbar-section{
+        
+        & .navbar-links{
+            width: 100%;
+        }
+    }
+}
+

@@ -1,0 +1,100 @@
+@import url("base.css");
+
+
+#footer-section{
+    padding-block: 80px;
+    position: relative;
+
+
+    & .container{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    & .col{
+        width: 25%; 
+    }
+
+    & .col .text{
+        margin-bottom: 10px;
+    } 
+
+    & .col, .links{
+        margin-bottom: 40px;
+    }
+
+    & .col h2{
+        color: var(--goldClr);
+        margin-bottom: 10px;
+    }
+
+    & .links{
+        padding-inline: 30px;
+    }
+
+    & .links p{
+        font-weight: 600;
+        color: var(--goldClr);
+        margin-bottom: 20px;
+        letter-spacing: 0.5px;
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    & .links ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    & hr{
+        margin-block: 20px;
+    }
+
+    & .ticks{
+        font-size: 16px;
+        color: var(--goldClr);
+        margin-right: 2px;
+    }
+
+    & .follow ul li{
+        display: flex;
+
+        & img{
+            width: 30px;
+            height: 30px;
+            margin-right: 20px;
+        }
+    }
+
+    & .copyright p{
+        width: 100%;
+        text-align: center;
+        /* padding-inline: 30px; */
+    }
+}
+
+@media  (max-width: 900px) {
+    #footer-section{
+
+        & .container{
+            flex-wrap: wrap;
+        }
+
+        & .links, .col{
+            width: 50%;
+            padding-inline: 30px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    #footer-section{
+
+        & .links, .col{
+            width: 100%;
+            padding-inline: 30px;
+        }
+    }
+}

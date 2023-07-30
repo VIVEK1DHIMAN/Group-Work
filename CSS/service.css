@@ -1,0 +1,122 @@
+@import url("base.css");
+
+ion-icon {
+    color: var(--goldClr);
+}
+
+#service-section{
+    font-family: 'Catamaran', sans-serif;
+    letter-spacing: 0.36px;
+    padding-block: 100px;
+    background: linear-gradient(to bottom , rgb(var(--greenClr-dark-op), 0.5) 1%, var(--blackClr-background) 70%);
+
+    & .material-symbols-outlined{
+        color: var(--goldClr);
+        margin-right: 10px;
+    }    
+
+    & .service-info{
+        /* width: 100%; */
+        margin-inline: auto;
+        text-align: center;
+
+        & h3{
+            font-family: 'Italianno', cursive;
+            color:var(--goldClr);
+            font-size: 32px;
+        }
+    
+    
+        & h2{
+            font-size: 36px;
+            text-align: center; 
+        }
+    
+        & p{
+            padding: 0% 26% 0% 26%;
+        }
+    }
+
+    & .row{
+        padding-block: 20px;
+        margin-inline: -20px;
+    }
+
+    & .col{
+        width: 33.3%;
+        text-align: center;
+    }
+
+    & .card{
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+        padding: 40px;
+        /* background-color: red; */
+        width: 100%;
+        transition: all 0.3s ease;
+    }
+
+    & header{
+        color: var(--whiteClr);
+        /* font-family: 'Catamaran', sans-serif; */
+        font-size: 20px;
+        font-weight: 600;
+        gap:20px;
+        width: 100%;
+
+        & span{
+            font-size: 36px;
+            font-weight: 600;
+            text-transform: none;
+            font-style: normal;
+            text-decoration: none;
+            line-height: 1.2em;
+            margin-bottom: 20px;
+            color: var(--goldClr);  
+        }
+
+        & .price{
+            padding-bottom: 20px;
+        }
+    }
+
+    & .content ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    & .content ul li{
+        padding: 7px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    & .card:hover{
+        border-radius: 10px;
+        box-shadow: 0px 5px 100px 0px rgba(241, 231, 231, 0.096);
+    }
+}
+
+
+@media (max-width: 1000px){
+    #service-section{
+        & .row{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        & .col{
+            width: 60%;
+        }
+    }
+}
+
+@media (max-width: 786px){
+    #service-section{
+        & .col{
+            width: 100%;
+        }
+    }
+}
